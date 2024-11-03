@@ -6,6 +6,7 @@ import website1 from '../../assets/website1.png';
 import website2 from '../../assets/website2.png';
 import drug from '../../assets/drug.png';
 import rna from '../../assets/rna.webp';
+import rs from '../../assets/re.png';
 
 
 function Projects() {
@@ -45,6 +46,16 @@ function Projects() {
               clientLink="http://athifalreact.great-site.net/" //
             />
           </div>
+          <div className="project-card">
+            <ProjectCard
+              imgPath={rs}
+              isBlog={false}
+              title="RestaurantTS-Web"
+              description="The RestaurantTS App is a static restaurant landing page built with Next.js 14, utilizing React, TypeScript, TailwindCSS, and various libraries for animations and UI components, and it's designed for deployment on Vercel.This project offers a visually appealing and responsive interface."
+              ghLink="https://github.com/athifal/StaticRestaurentweb.git"
+              demoLink="https://static-restaurentweb.vercel.app/"
+            />
+          </div>
 
           <div className="project-card">
             <ProjectCard
@@ -58,16 +69,7 @@ function Projects() {
             />
           </div>
 
-          <div className="project-card">
-            <ProjectCard
-              imgPath=""
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from markdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </div>
+
 
           <div className="project-card">
             <ProjectCard
