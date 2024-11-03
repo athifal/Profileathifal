@@ -1,132 +1,144 @@
+/* Container and Section Styles */
+.page-section {
+    padding: 2rem;
+}
+
 .maincontainer {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-
-/* Timeline */
-.timeline {
-    list-style: none;
+/* Timeline Roadmap */
+.timeline-roadmap {
     position: relative;
-    padding: 0;
-    margin: 0 2rem;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.timeline:before {
+.timeline-roadmap:before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%;
-    width: 2px;
+    width: 4px;
     background-color: #ddd;
+    left: 50%;
     transform: translateX(-50%);
 }
 
-.timeline li {
+/* Timeline Item */
+.timeline-item {
     position: relative;
-    width: 45%; /* Reduced width to add more spacing on both sides */
-    padding: 2rem 0;
-    box-sizing: border-box;
+    width: 50%;
+    margin: 1.5rem 0;
 }
 
-.timeline li:nth-child(odd) {
-    left: 0;
+.timeline-item.left {
+    align-self: flex-start;
     text-align: right;
-    padding-right: 2rem; /* Add more space from the left border */
+    padding-right: 2rem;
 }
 
-.timeline li:nth-child(even) {
-    left: 55%; /* Adjusted to align correctly with more space on the right */
-    text-align: right;
-    padding-left: 2rem; /* Add more space from the right border */
+.timeline-item.right {
+    align-self: flex-end;
+    text-align: left;
+    padding-left: 2rem;
 }
 
-.timeline-content {
-    position: relative;
-    background: var(--project-card-bg);
-    padding: 1rem;
-    border-radius: 8px;
+.timeline-item.left .timeline-card {
+    margin-left: auto;
+}
+
+.timeline-item.right .timeline-card {
+    margin-right: auto;
+}
+
+/* Timeline Card */
+.timeline-card {
+    background-color: var(--project-card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Slightly reduced to allow more breathing room */
-    margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    flex-direction: row;
-    transform: translateX(-50%);
+    gap: 1.5rem;
+    transition: transform 0.3s;
+    width: 90%;
 }
 
-.timeline li:nth-child(odd) .timeline-content {
-    transform: translateX(-5%); /* Adjusted for more balanced alignment */
+.timeline-card:hover {
+    transform: translateY(-5px);
 }
 
-.timeline li:nth-child(even) .timeline-content {
-    transform: translateX(5%);
-}
-
-/* Image Style */
-.timeline-img {
-    width: 60px;
-    height: 60px;
+/* Image */
+.timeline-image {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-img img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+    border: 2px solid #ddd;
 }
 
-/* Timeline details */
-.timeline-details {
+/* Timeline Info */
+.timeline-info {
     flex: 1;
 }
 
-.timeline-details h2 {
+.timeline-info h2 {
     font-size: 1.2rem;
     margin: 0;
-   
 }
 
-.timeline-details h3 {
+.timeline-info h3 {
     font-size: 1rem;
     margin: 0.5rem 0;
+    color: var(--btn-color);
 }
 
-.timeline-details p {
+.timeline-info p {
     font-size: 0.9rem;
     line-height: 1.4;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .timeline li,
-    .timeline li:nth-child(odd) .timeline-content,
-    .timeline li:nth-child(even) .timeline-content {
-        left: 0;
-        width: 100%;
-        text-align: center;
-        padding: 1rem 1rem; /* Add padding on both sides */
-    }
-
-    .timeline:before {
+    .timeline-roadmap:before {
         left: 20px;
     }
 
-    .timeline-content {
-        margin-left: 2rem;
-        width: calc(100% - 4rem); /* Adjusted for more space */
-        padding: 1rem;
+    .timeline-item {
+        width: 100%;
+        text-align: center;
+        padding: 0;
     }
 
-    .timeline-content {
+    .timeline-item.left,
+    .timeline-item.right {
+        align-self: center;
+    }
+
+    .timeline-card {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        width: calc(100% - 4rem);
+    }
+
+    .timeline-image {
+        margin-bottom: 1rem;
+        width: 70px;
+        height: 70px;
+    }
+
+    .timeline-info h2 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-info h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-info p {
+        font-size: 0.85rem;
     }
 }
