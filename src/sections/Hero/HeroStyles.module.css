@@ -110,6 +110,9 @@
 
 .description {
   max-width: 24ch;
+  margin: 0 auto 20px;
+  line-height: 1.4;
+  white-space: normal;
 }
 
 .info {
@@ -139,4 +142,5 @@
     }
   }
 }
+
 
