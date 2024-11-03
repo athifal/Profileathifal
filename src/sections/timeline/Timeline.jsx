@@ -9,7 +9,7 @@ const Timeline = () => {
   return (
     <section className="page-section">
       <div className="maincontainer">
-        <h1 className="sectionTitle">Education Roadmap</h1>
+        <h1 className="sectionTitle">Education</h1>
       </div>
       <div className="timeline-roadmap">
         <div className="timeline-item left">
