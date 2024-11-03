@@ -1,0 +1,70 @@
+/* ContactStyles.module.css */
+.contactContainer {
+  max-width: 800px; /* Limit the maximum width of the container */
+  margin: 0 auto; /* Center the container */
+  padding: 40px 20px; /* Padding around the container */
+  text-align: center; /* Center text */
+}
+
+.header {
+  padding-top: 20px; /* Space above header */
+}
+
+.title {
+  font-weight: bold; /* Bold font for the title */
+  font-size: 2rem; /* Large font size */
+}
+
+.subtitle {
+  color: #6c757d; /* Muted text color */
+  margin-bottom: 40px; /* Space below subtitle */
+}
+
+.contactInfoContainer {
+  display: flex; /* Use flexbox for the contact cards */
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Space between cards */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.contactCard {
+  display: flex; /* Flexbox for card content */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 20px; /* Padding inside each card */
+  border: none; /* No border */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Box shadow */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #ffffff; /* White background */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+  min-width: 200px; /* Minimum width for each card */
+}
+
+.contactCard:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.icon {
+  font-size: 40px; /* Icon size */
+  margin-bottom: 10px; /* Space below the icon */
+}
+
+.mobileInfo {
+  font-size: 1.2rem; /* Larger text for mobile info */
+  color: #343a40; /* Dark text color */
+  margin-bottom: 5px; /* Space below mobile info */
+}
+
+.contactInfo {
+  color: #6c757d; /* Muted text color */
+  font-size: 0.9rem; /* Smaller font size for contact info */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contactInfoContainer {
+    flex-direction: column; /* Stack cards vertically on small screens */
+    align-items: center; /* Center items horizontally */
+  }
+}

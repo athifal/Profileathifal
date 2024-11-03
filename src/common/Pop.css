@@ -1,0 +1,41 @@
+.whatsapp_float {
+    position: fixed; /* Fixed position to keep it on the screen */
+    width: 60px; /* Width of the button */
+    height: 60px; /* Height of the button */
+    bottom: 40px; /* Distance from the bottom */
+    right: 40px; /* Distance from the right */
+    background-color: #25d366; /* WhatsApp green */
+    border-radius: 50%; /* Circular shape */
+    text-align: center; /* Center the icon */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Slight shadow */
+    z-index: 100; /* Ensure it's above other content */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.whatsapp-icon {
+    width: 30px; /* Width of the icon */
+    height: 30px; /* Height of the icon */
+}
+
+/* Change background color on hover */
+.whatsapp_float:hover {
+    background-color: #128C7E; /* Darker green on hover */
+}
+
+/* For mobile screens */
+@media screen and (max-width: 767px) {
+    .whatsapp-icon {
+        width: 25px; /* Adjust icon size for mobile */
+        height: 25px; /* Adjust icon size for mobile */
+    }
+
+    .whatsapp_float {
+        width: 50px; /* Adjust button size for mobile */
+        height: 50px; /* Adjust button size for mobile */
+        bottom: 20px; /* Adjust position for mobile */
+        right: 10px; /* Adjust position for mobile */
+    }
+}

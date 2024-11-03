@@ -1,0 +1,142 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  height: 100dvh;
+  min-height: 500px;
+  overflow: hidden;
+  
+
+  .hero {
+    max-width: 200px; /* Set the maximum width */
+     /* Allow it to be responsive */
+    height: auto; /* Fixed height to maintain circular shape */
+    border-radius: 20%; /* Makes the container circular */
+    background-color: #ffcc33; /* Main background color */
+    position: relative; /* Relative positioning for layering */
+    overflow: hidden; /* Ensures contents do not overflow */
+    z-index: 1; /* Ensure the image is above the canvas */
+    transition: transform 0.2s ease; /* Smooth scaling effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Top Split Section */
+
+/* Curve One */
+/* Additional Curve (If Needed) */
+
+
+/* Optional hover effect */
+.hero:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+   
+  /* Canvas styles to cover the entire container */
+  canvas {
+    position: absolute; /* Position canvas absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Make sure canvas is behind */
+    filter: blur(8px); /* Apply a blur effect to the background canvas */
+  }
+
+  span {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+
+    a {
+      margin: 0;
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  a {
+    width: fit-content;
+    align-self: center;
+  }
+
+  h3 {
+    color: var(--h3-text-color);
+}
+
+  button {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 20px;
+    width: 126px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.colorModeContainer {
+  position: relative;
+}
+
+.colorMode {
+  position: absolute;
+  top: 10px; /* Aligns the element at the top */
+  left: 50%; /* Positions it at the center horizontally */
+  transform: translateX(-50%); /* Adjusts the element back to the center */
+  width: 25px;
+}
+
+.colorMode:hover {
+  cursor: pointer;
+}
+
+.description {
+  max-width: 24ch;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (width >= 800px) {
+  .container {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .hero {
+      max-width: 350px;
+      width: 350px;
+    }
+  }
+}
+
+@media (width >= 1400px) {
+  .container {
+    .hero {
+      max-width: 400px;
+      width: 400px;
+    }
+  }
+}
+

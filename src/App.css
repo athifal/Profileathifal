@@ -1,0 +1,121 @@
+:root {
+  --background-color: #f0f4f8; /* Light background */
+  --btn-color: #3b82f6; /* Bright blue for buttons */
+  --btn-text-color: #ffffff; /* White text on buttons */
+  --project-card-bg: rgba(255, 255, 255, 0.9); /* Slightly transparent white for project cards */
+  --text-color: #333333; /* Dark gray text */
+  --form-text-color: #555555; /* Medium gray for form text */
+  --footer-text-color: #777777;
+  --h3-text-color: #3b82f6; /* Lighter gray for footer text */
+}
+
+[data-theme='dark'] {
+  --background-color: #1e1e1e; /* Dark background */
+  --btn-color: #10b981; /* Green button color */
+  --btn-text-color: #ffffff; /* White text on buttons */
+  --project-card-bg: rgba(255, 255, 255, 0.1); /* Transparent project card background */
+  --text-color: #e0e0e0; /* Light gray text */
+  --form-text-color: #e0e0e0; /* Light gray for form text */
+  --footer-text-color: #aaaaaa; 
+  --h3-text-color: #10b981;/* Gray for footer text */
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 60px;
+  font-family: 'Arial', sans-serif; /* Base font family */
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 20px;
+  max-width: 1200px; /* Limit the max width */
+}
+h3 {
+  color: var(--h3-text-color);
+}
+
+h1,
+h2,
+p {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: semi-bold;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.sectionTitle {
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--btn-color); /* Underline for section titles */
+  padding-bottom: 10px;
+}
+
+.hover {
+  cursor: pointer;
+  transition: transform 0.3s; /* Add a hover effect */
+}
+
+.hover:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+@media (min-width: 800px) {
+  #root {
+    gap: 80px;
+  }
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #root {
+    gap: 120px;
+  }
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 22px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 60px;
+  }
+}

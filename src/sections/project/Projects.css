@@ -1,0 +1,48 @@
+.project-section {
+    padding: 40px 20px;
+  }
+  
+  .project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .project-heading {
+    color: #b48ead;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .purple {
+    color: #88c0d0;
+  }
+  
+  .project-description {
+    
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .project-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+  }
+  
+  /* Individual card styling */
+  .project-card {
+    flex: 1 1 300px; /* Flex grow and basis to allow responsive behavior */
+    max-width: 300px; /* Limit the max width of cards */
+    background: var(--project-card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(54, 39, 39, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  

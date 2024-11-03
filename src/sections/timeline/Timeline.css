@@ -1,0 +1,132 @@
+.maincontainer {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/* Timeline */
+.timeline {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 0 2rem;
+    
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #ddd;
+    transform: translateX(-50%);
+}
+
+.timeline li {
+    position: relative;
+    width: 45%; /* Reduced width to add more spacing on both sides */
+    padding: 2rem 0;
+    box-sizing: border-box;
+}
+
+.timeline li:nth-child(odd) {
+    left: 0;
+    text-align: right;
+    padding-right: 2rem; /* Add more space from the left border */
+}
+
+.timeline li:nth-child(even) {
+    left: 55%; /* Adjusted to align correctly with more space on the right */
+    text-align: right;
+    padding-left: 2rem; /* Add more space from the right border */
+}
+
+.timeline-content {
+    position: relative;
+    background: var(--project-card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Slightly reduced to allow more breathing room */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+    transform: translateX(-50%);
+}
+
+.timeline li:nth-child(odd) .timeline-content {
+    transform: translateX(-5%); /* Adjusted for more balanced alignment */
+}
+
+.timeline li:nth-child(even) .timeline-content {
+    transform: translateX(5%);
+}
+
+/* Image Style */
+.timeline-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Timeline details */
+.timeline-details {
+    flex: 1;
+}
+
+.timeline-details h2 {
+    font-size: 1.2rem;
+    margin: 0;
+   
+}
+
+.timeline-details h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.timeline-details p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .timeline li,
+    .timeline li:nth-child(odd) .timeline-content,
+    .timeline li:nth-child(even) .timeline-content {
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1rem; /* Add padding on both sides */
+    }
+
+    .timeline:before {
+        left: 20px;
+    }
+
+    .timeline-content {
+        margin-left: 2rem;
+        width: calc(100% - 4rem); /* Adjusted for more space */
+        padding: 1rem;
+    }
+
+    .timeline-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
