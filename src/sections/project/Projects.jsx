@@ -26,8 +26,8 @@ function Projects() {
             <ProjectCard
               imgPath={website2}
               isBlog={false}
-              title="Music Boxxx"
-              description="Music Boxxx is a modern music streaming web app built with Node.js, React, Material UI, and TypeScript, utilizing the Unofficial JioSaavn API for streaming and searching music. It features a clean, responsive interface with support for light and dark themes, playlist management, and mobile-friendly design."
+              title="Music Boxx"
+              description="Music Boxx is a modern music streaming web app built with Node.js, React, Material UI, and TypeScript, utilizing the Unofficial JioSaavn API for streaming and searching music. It features a clean, responsive interface with support for light and dark themes, playlist management, and mobile-friendly design."
               ghLink="https://github.com/athifal/MusicBoxx.git"
               demoLink="https://music-boxx.vercel.app/home"
             />
